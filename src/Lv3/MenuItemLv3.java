@@ -1,13 +1,14 @@
-package Lv2;
+package Lv3;
 
-public class MenuItem {
+
+public class MenuItemLv3 {
     // 속
     String name;
     double price;
     String description;
 
     //생
-    public MenuItem(String name, double price, String description) {
+    public MenuItemLv3(String name, double price, String description) {
         this.name = name;
         this.price = price;
         this.description = description;
@@ -20,11 +21,10 @@ public class MenuItem {
     public double getPrice() {
         return price;
     }
-    public String getdescription() {
+    public String getDescription() {
         return description;
     }
 
-    // 메서드
     public void outputMenuItem(int num) {
         System.out.println(num+ ". "+name +"   | W "+ price+" | " + description);
     }
