@@ -1,10 +1,17 @@
 package Lv4;
+
+import Lv4.Food.Food;
+import Lv4.foodItem.Burger;
+import Lv4.foodItem.Dessert;
+import Lv4.foodItem.Drink;
+
 import java.util.Scanner;
 
 public class KioskLv4 {
+    //속성
+    private MenuLv4 mainMenu = new MenuLv4();
 
-    MenuLv4 mainMenu= new MenuLv4();
-
+    // 키오스크 start
     public void start() {
         mainMenu.addBurgerItems();
         mainMenu.addMainItem();
@@ -13,12 +20,13 @@ public class KioskLv4 {
         chooseMainMenu();
     }
 
+    // 메인메뉴 고르는 메서드
     public void chooseMainMenu() {
         mainMenu.showMainMenu();
         Scanner sc = new Scanner(System.in);
         int input = sc.nextInt();
-        while(true) {
-            if (input==1) {
+        while (true) {
+            if (input == 1) {
                 mainMenu.showBurgerMenu();
                 chooseBurgerMenue(sc);
             } else if (input == 2) {
@@ -37,20 +45,21 @@ public class KioskLv4 {
         }
     }
 
+    // 버거 메뉴 선택 메서드
     public void chooseBurgerMenue(Scanner sc) {
         while (true) {
             int input = sc.nextInt();
             if (input == 1) {
-                inputChooseBurger(input);
+                inputChoose(input, 1);
                 chooseMainMenu();
-            } else if (input == 2){
-                inputChooseBurger(input);
+            } else if (input == 2) {
+                inputChoose(input, 1);
                 chooseMainMenu();
-            }else if (input == 3){
-                inputChooseBurger(input);
+            } else if (input == 3) {
+                inputChoose(input, 1);
                 chooseMainMenu();
             } else if (input == 4) {
-                inputChooseBurger(input);
+                inputChoose(input, 1);
                 chooseMainMenu();
             } else if (input == 0) {
                 chooseMainMenu();
@@ -61,24 +70,21 @@ public class KioskLv4 {
         }
     }
 
-    public void inputChooseBurger(int input) {
-        System.out.println("선택한 메뉴: " + mainMenu.foods.get(input-1).getName() + "   | W " + mainMenu.foods.get(input-1).getPrice() + " | " + mainMenu.foods.get(input-1).getDes()+"\n");
-    }
-
+    //드링크 메뉴 선택 메서드
     public void chooseDrinkMenue(Scanner sc) {
         while (true) {
             int input = sc.nextInt();
             if (input == 1) {
-                inputDrinkBurger(input);
+                inputChoose(input, 2);
                 chooseMainMenu();
-            } else if (input == 2){
-                inputDrinkBurger(input);
+            } else if (input == 2) {
+                inputChoose(input, 2);
                 chooseMainMenu();
-            }else if (input == 3){
-                inputDrinkBurger(input);
+            } else if (input == 3) {
+                inputChoose(input, 2);
                 chooseMainMenu();
             } else if (input == 4) {
-                inputDrinkBurger(input);
+                inputChoose(input, 2);
                 chooseMainMenu();
             } else if (input == 0) {
                 chooseMainMenu();
@@ -89,24 +95,21 @@ public class KioskLv4 {
         }
     }
 
-    public void inputDrinkBurger(int input) {
-        System.out.println("선택한 메뉴: " + mainMenu.foods.get(input-1).getName() + "   | W " + mainMenu.foods.get(input-1).getPrice() + " | " + mainMenu.foods.get(input-1).getDes()+"\n");
-    }
-
+    // 디저트 메뉴 선택 메서드
     public void chooseDessertMenue(Scanner sc) {
         while (true) {
             int input = sc.nextInt();
             if (input == 1) {
-                inputDessertBurger(input);
+                inputChoose(input, 3);
                 chooseMainMenu();
-            } else if (input == 2){
-                inputDessertBurger(input);
+            } else if (input == 2) {
+                inputChoose(input, 3);
                 chooseMainMenu();
-            }else if (input == 3){
-                inputDessertBurger(input);
+            } else if (input == 3) {
+                inputChoose(input, 3);
                 chooseMainMenu();
             } else if (input == 4) {
-                inputDessertBurger(input);
+                inputChoose(input, 3);
                 chooseMainMenu();
             } else if (input == 0) {
                 chooseMainMenu();
@@ -117,10 +120,18 @@ public class KioskLv4 {
         }
     }
 
-    public void inputDessertBurger(int input) {
-        System.out.println("선택한 메뉴: " + mainMenu.foods.get(input-1).getName() + "   | W " + mainMenu.foods.get(input-1).getPrice() + " | " + mainMenu.foods.get(input-1).getDes()+"\n");
+    //선택한 메뉴 불러오는 메서드
+    public void inputChoose(int input, int num) {
+        for (int i = 1; i <= mainMenu.getFoodsItem().size(); i++) {
+            Food temp = mainMenu.getFoodsItem().get(i - 1);
+            if (num == 2 && temp instanceof Drink && temp.getNumber() == input) {
+                System.out.println("선택한 메뉴: " + temp.getName() + "   | W " + temp.getPrice() + " | " + temp.getDes() + "\n");
+            } else if (num == 1 && temp instanceof Burger && temp.getNumber() == input) {
+                System.out.println("선택한 메뉴: " + temp.getName() + "   | W " + temp.getPrice() + " | " + temp.getDes() + "\n");
+            } else if (num == 3 && temp instanceof Dessert && temp.getNumber() == input) {
+                System.out.println("선택한 메뉴: " + temp.getName() + "   | W " + temp.getPrice() + " | " + temp.getDes() + "\n");
+            }
+        }
     }
-
-
 }
 

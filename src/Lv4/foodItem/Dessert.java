@@ -2,15 +2,22 @@ package Lv4.foodItem;
 import Lv4.Food.Food;
 
 public class Dessert implements Food {
+    int dessertNumber;
     String dessertName;
     double dessertPrice;
     String dessertDes;
 
     //생
-    public Dessert(String dessertName, double dessertPrice, String dessertDes) {
+    public Dessert(int dessertNumber, String dessertName, double dessertPrice, String dessertDes) {
+        this.dessertNumber = dessertNumber;
         this.dessertName = dessertName;
         this.dessertPrice = dessertPrice;
         this.dessertDes = dessertDes;
+    }
+
+    @Override
+    public int getNumber() {
+        return dessertNumber;
     }
 
     @Override
@@ -29,13 +36,10 @@ public class Dessert implements Food {
     }
 
     @Override
-    public void output(int i) {
-        System.out.println(i+ ". "+dessertName +"   | W "+ dessertPrice+" | " + dessertDes);
+    public void output() {
+        System.out.println(dessertNumber + ". "+dessertName +"   | W "+ dessertPrice+" | " + dessertDes);
 
     }
 
-    // 메서드
-    public void outputDessertMenu(int num) {
-        System.out.println(num + ". " + dessertName + "   | W " + dessertPrice + " | " + dessertDes);
-    }
+
 }

@@ -2,16 +2,23 @@ package Lv4.foodItem;
 import Lv4.Food.Food;
 
 public class Burger implements Food {
+    int burgerNumber;
     String burgerName;
     double burgerPrice;
     String burgerDes;
 
 
     //생
-    public Burger(String burgerName, double burgerPrice, String burgerDes) {
+    public Burger(int burgerNumber, String burgerName, double burgerPrice, String burgerDes) {
+        this.burgerNumber = burgerNumber;
         this.burgerName = burgerName;
         this.burgerPrice = burgerPrice;
         this.burgerDes = burgerDes;
+    }
+
+    @Override
+    public int getNumber() {
+        return burgerNumber;
     }
 
     @Override
@@ -30,8 +37,8 @@ public class Burger implements Food {
     }
 
     @Override
-    public void output(int i) {
-        System.out.println(i+ ". "+burgerName +"   | W "+ burgerPrice+" | " + burgerDes);
+    public void output() {
+        System.out.println(burgerNumber+ ". "+burgerName +"   | W "+ burgerPrice+" | " + burgerDes);
     }
 
 

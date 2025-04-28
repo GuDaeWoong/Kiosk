@@ -26,6 +26,4 @@ public class Main {
         KioskRe1 kioskRe1 = new KioskRe1(main.menuItem_re1);
         kioskRe1.start();
     }
-
-
 }
