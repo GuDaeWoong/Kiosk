@@ -23,23 +23,26 @@ public class MainLv2 {
         }
         System.out.println("0. 종료      | 종료");
 
+        while (true) {
+            System.out.println("어떤 항목을 고르시겠습니까\n번호를 입력해 주세요");
+            int input = sc.nextInt();
 
-        System.out.println("어떤 항목을 고르시겠습니까\n번호를 입력해 주세요");
-        int input = sc.nextInt();
+            if (input == 1) {
+                menuItems.get(input-1).outputMenuItem(input);
+            } else if (input == 2) {
+                menuItems.get(input-1).outputMenuItem(input);
+            } else if (input == 3) {
+                menuItems.get(input-1).outputMenuItem(input);
+            } else if (input == 4) {
+                menuItems.get(input-1).outputMenuItem(input);
+            } else if (input == 0) {
+                System.out.println("0. 종료      | 종료");
+            } else {
+                System.out.println("유효한 입력값이 아닙니다.");
+                System.out.println("다시 입력해주세요");
+            }
 
-        if (input == 1) {
-            menuItems.get(input-1).outputMenuItem(input);
-        } else if (input == 2) {
-            menuItems.get(input-1).outputMenuItem(input);
-        } else if (input == 3) {
-            menuItems.get(input-1).outputMenuItem(input);
-        } else if (input == 4) {
-            menuItems.get(input-1).outputMenuItem(input);
-        } else if (input == 0) {
-            System.out.println("0. 종료      | 종료");
-        } else {
-            System.out.println("유효한 입력값이 아닙니다.");
-            System.out.println("다시 입력해주세요");
         }
+
     }
 }
