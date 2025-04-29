@@ -1,5 +1,5 @@
-package Lv4.foodItem;
-import Lv4.Food.Food;
+package Lv6.foodItem;
+import Lv6.Food.Food;
 
 public class Dessert implements Food {
     int dessertNumber;
