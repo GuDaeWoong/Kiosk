@@ -203,6 +203,7 @@ public class KioskLv7 {
                     outputDiscountPrice(sc, mainMenu.cartTotalMoney());
                     // “주문하기”를 누르면 장바구니를 초기화
                     mainMenu.clearShoppingCart();
+                    chooseMainMenu();
                 } else if (OrderOrMenu == 2) {
                     chooseMainMenu();
                 } else {

@@ -13,31 +13,30 @@ public class MenuLv6 {
     private List<MainMenu> mainItemLv4s;
     private List<Food> cart = new ArrayList<>();
 
-    //
+    //장바구니 추가
     public void addShoppingCart(Food shoppingFood) {
         cart.add(shoppingFood);
         System.out.println(shoppingFood.getName() + " 이 장바구니에 추가되었습니다.");
     }
 
+    //장바구니 생성
     public List<Food> getShoppingCart() {
         return cart;
     }
 
-
-    //다형성을 사용하여 버거, 드링크, 디저트를 food 하나로 합쳐줌
-//    List<Drink> drinkItemLv4s;
-//    List<Dessert> dessertsItemLv4s;
-
+    //다형성
     //food 리스트를 가져오기위한 Getter
     //food list getter
     public List<Food> getFoodsItem() {
         return foods;
     }
 
+    // setter foods
     public void setfoods(List<Food> foods) {
         this.foods = foods;
     }
 
+    // setter mainItem
     public void setmainItem(List<MainMenu> mainItemLv4s) {
         this.mainItemLv4s = mainItemLv4s;
     }
@@ -122,6 +121,7 @@ public class MenuLv6 {
         System.out.println("0. return  |  뒤로가기");
     }
 
+    //쇼핑카트 보여주는 메서드
     public void showShoppingCart() {
         System.out.println("");
         System.out.println("[ Orders ]");
@@ -130,6 +130,7 @@ public class MenuLv6 {
         }
     }
 
+    // 토탈 금액을 보여줌
     public void showTotalMoney() {
         System.out.println("");
         System.out.println("[ Total ]");
@@ -140,6 +141,7 @@ public class MenuLv6 {
         System.out.println("W " + totalmoney);
     }
 
+    // 토탈 금액 반환
     public String cartTotalMoney() {
         double totalmoney = 0.0;
         for (int i = 1; i <= cart.size(); i++) {
