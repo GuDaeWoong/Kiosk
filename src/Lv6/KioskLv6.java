@@ -39,8 +39,7 @@ public class KioskLv6 {
                 mainMenu.showShoppingCart();
                 mainMenu.showTotalMoney();
                 // 주문을 진행할지 메뉴판으로 가는지 조건문
-                System.out.println("1. 주문");
-                System.out.println("2. 메뉴판");
+                System.out.println("1. 주문          2. 메뉴판");
                 int OrderOrMenu = sc.nextInt();
                 if (OrderOrMenu == 1) {
                     // 장바구니에 있던 list들의 주문금액들을 반환해주는 메서드 사용
@@ -74,37 +73,10 @@ public class KioskLv6 {
         }
     }
 
-
-//    // 메인메뉴 고르는 메서드
-//    public void chooseMainMenu() {
-//        mainMenu.showMainMenu();
-//        Scanner sc = new Scanner(System.in);
-//        int input = sc.nextInt();
-//        while (true) {
-//            if (input == 1) {
-//                mainMenu.showBurgerMenu();
-//                chooseBurgerMenue(sc);
-//            } else if (input == 2) {
-//                mainMenu.showDrinkMenu();
-//                chooseDrinkMenue(sc);
-//            } else if (input == 3) {
-//                mainMenu.showDessertMenu();
-//                chooseDessertMenue(sc);
-//            } else if (input == 0) {
-//                System.out.println("프로그램을 종료합니다.");
-//                break;
-//            } else {
-//                System.out.println("잘못 입력하셨습니다");
-//                continue;
-//            }
-//        }
-//    }
-
-
+    // 장바구니 추가기능
     public void wantAddMenu(int chooseNum, int MineNum, Scanner sc) {
         System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-        System.out.println("1. 확인");
-        System.out.println("2. 취소");
+        System.out.println("1. 확인     2. 취소");
         int input = sc.nextInt();
         if (input == 1) {
             inputChoose(chooseNum, MineNum);
@@ -123,20 +95,12 @@ public class KioskLv6 {
             int input = sc.nextInt();
             if (input == 1) {
                 wantAddMenu(input, 1, sc);
-//                inputChoose(input, 1);
-//                chooseMainMenu();
             } else if (input == 2) {
                 wantAddMenu(input, 1, sc);
-//                inputChoose(input, 1);
-//                chooseMainMenu();
             } else if (input == 3) {
                 wantAddMenu(input, 1, sc);
-//                inputChoose(input, 1);
-//                chooseMainMenu();
             } else if (input == 4) {
                 wantAddMenu(input, 1, sc);
-//                inputChoose(input, 1);
-//                chooseMainMenu();
             } else if (input == 0) {
                 chooseMainMenu();
             } else {
@@ -152,20 +116,12 @@ public class KioskLv6 {
             int input = sc.nextInt();
             if (input == 1) {
                 wantAddMenu(input, 2, sc);
-//                inputChoose(input, 2);
-//                chooseMainMenu();
             } else if (input == 2) {
                 wantAddMenu(input, 2, sc);
-//                inputChoose(input, 2);
-//                chooseMainMenu();
             } else if (input == 3) {
                 wantAddMenu(input, 2, sc);
-//                inputChoose(input, 2);
-//                chooseMainMenu();
             } else if (input == 4) {
                 wantAddMenu(input, 2, sc);
-//                inputChoose(input, 2);
-//                chooseMainMenu();
             } else if (input == 0) {
                 chooseMainMenu();
             } else {
@@ -181,25 +137,16 @@ public class KioskLv6 {
             int input = sc.nextInt();
             if (input == 1) {
                 wantAddMenu(input, 3, sc);
-//                inputChoose(input, 3);
-//                chooseMainMenu();
             } else if (input == 2) {
                 wantAddMenu(input, 3, sc);
-//                inputChoose(input, 3);
-//                chooseMainMenu();
             } else if (input == 3) {
                 wantAddMenu(input, 3, sc);
-//                inputChoose(input, 3);
-//                chooseMainMenu();
             } else if (input == 4) {
                 wantAddMenu(input, 3, sc);
-//                inputChoose(input, 3);
-//                chooseMainMenu();
             } else if (input == 0) {
                 chooseMainMenu();
             } else {
                 System.out.println("잘못 입력하셨습니다.\n다시 입력해주세요");
-                continue;
             }
         }
     }
