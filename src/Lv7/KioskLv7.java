@@ -198,12 +198,17 @@ public class KioskLv7 {
             // 주문을 진행할지 메뉴판으로 가는지 조건문
             System.out.println("1. 주문          2. 메뉴판");
             int OrderOrMenu = sc.nextInt();
-            if (OrderOrMenu == 1) {
-                outputDiscountPrice(sc, mainMenu.cartTotalMoney());
-                // “주문하기”를 누르면 장바구니를 초기화
-                mainMenu.clearShoppingCart();
-            } else if (OrderOrMenu == 2) {
-                chooseMainMenu();
+            while (true) {
+                if (OrderOrMenu == 1) {
+                    outputDiscountPrice(sc, mainMenu.cartTotalMoney());
+                    // “주문하기”를 누르면 장바구니를 초기화
+                    mainMenu.clearShoppingCart();
+                } else if (OrderOrMenu == 2) {
+                    chooseMainMenu();
+                } else {
+                    System.out.println("잘못된 입력입니다. 다시 시도하세요.");
+                    return;
+                }
             }
         } else if (inputOredr == 5) {
             System.out.println("진행주인 주문을 취소하였습니다.");

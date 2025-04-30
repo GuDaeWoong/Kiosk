@@ -6,7 +6,7 @@ public enum Discount{
     VETERAN(1, price -> price * (1 - 0.1)),
     ARMY(2, price -> price * (1 - 0.05)),
     STUDENT(3, (price)-> price * 0.97),
-    DEFAULT(0,  price -> price);
+    DEFAULT(4,  price -> price);
 
     private final  int num;
     private final Function<Double, Double> function;
