@@ -154,4 +154,8 @@ public class MenuLv7 {
         System.out.println("5. Cancel       | 진행중인 주문을 취소합니다.");
     }
 
+    //장바구니를 초기화
+    public void clearShoppingCart() {
+        cart.clear();
+    }
 }
