@@ -147,4 +147,9 @@ public class MenuLv6 {
         }
         return ("W " + totalmoney);
     }
+
+    //장바구니를 초기화
+    public void clearShoppingCart() {
+        cart.clear();
+    }
 }

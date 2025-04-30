@@ -25,7 +25,7 @@ public class KioskLv6 {
         Scanner sc = new Scanner(System.in);
         mainMenu.showMainMenu();
         //shoppingCart에 값이 있을경우 ORDER MENU 오더 메뉴 보여줌
-//        if (mainMenu.getShoppingCart().size() > 0) {
+        //Lv7 에서 메서드화 하여 압축
         if (!mainMenu.getShoppingCart().isEmpty()) {
             System.out.println("[ ORDER MENU ]");
             System.out.println("4. Orders       | 장바구니를 확인 후 주문합니다.");
@@ -34,7 +34,16 @@ public class KioskLv6 {
             // 오더에 있는걸 주문할지 취소할지 조건문
             // 장바구니에 추가된 메뉴를 보여줌
             // 장바구니에 있는 주문금액을 보여줌
-            if (inputOredr == 4) {
+            if (inputOredr == 1) {
+                mainMenu.showBurgerMenu();
+                chooseBurgerMenue(sc);
+            } else if (inputOredr == 2) {
+                mainMenu.showDrinkMenu();
+                chooseDrinkMenue(sc);
+            } else if (inputOredr == 3) {
+                mainMenu.showDessertMenu();
+                chooseDessertMenue(sc);
+            } else if (inputOredr == 4) {
                 System.out.println("아래와 같이 주문 하시겠습니까?");
                 mainMenu.showShoppingCart();
                 mainMenu.showTotalMoney();
@@ -43,7 +52,9 @@ public class KioskLv6 {
                 int OrderOrMenu = sc.nextInt();
                 if (OrderOrMenu == 1) {
                     // 장바구니에 있던 list들의 주문금액들을 반환해주는 메서드 사용
-                    System.out.println("주문이 완료되었습니다. 금액은 "+ mainMenu.cartTotalMoney()+"입니다.");
+                    System.out.println("주문이 완료되었습니다. 금액은 " + mainMenu.cartTotalMoney() + "입니다.");
+                    // “주문하기”를 누르면 장바구니를 초기화
+                    mainMenu.clearShoppingCart();
                 } else if (OrderOrMenu == 2) {
                     chooseMainMenu();
                 }
