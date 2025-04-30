@@ -16,13 +16,13 @@ public class MenuLv7 {
     private List<MainMenu> mainItemLv4s;
     private List<Food> cart = new ArrayList<>();
 
-    //
+    // 장바구니 추가 메서드
     public void addShoppingCart(Food shoppingFood) {
         cart.add(shoppingFood);
         System.out.println(shoppingFood.getName() + " 이 장바구니에 추가되었습니다.");
     }
 
-    // 쇼핑백 추가
+    // 쇼핑카트 추가
     public List<Food> getShoppingCart() {
         return cart;
     }
@@ -33,10 +33,12 @@ public class MenuLv7 {
         return foods;
     }
 
+    // setter음식
     public void setfoods(List<Food> foods) {
         this.foods = foods;
     }
 
+    // setter MainMenu
     public void setmainItem(List<MainMenu> mainItemLv4s) {
         this.mainItemLv4s = mainItemLv4s;
     }
@@ -125,6 +127,7 @@ public class MenuLv7 {
                 .forEach(item -> item.output());
     }
 
+    // 장바구니에 있는 total 타이틀과 내야할 금액을 보여줌
     public void showTotalMoney() {
         System.out.println("");
         System.out.println("[ Total ]");
@@ -135,6 +138,7 @@ public class MenuLv7 {
         System.out.println("W " + totalmoney);
     }
 
+    // 장바구니에 있는 모든 금액계산
     public double cartTotalMoney() {
         double totalmoney = 0.0;
         for (int i = 1; i <= cart.size(); i++) {
@@ -143,6 +147,7 @@ public class MenuLv7 {
         return (totalmoney);
     }
 
+    //ORDER MENU 를 보여주는 메서드
     public void showOrderMenu() {
         System.out.println("[ ORDER MENU ]");
         System.out.println("4. Orders       | 장바구니를 확인 후 주문합니다.");

@@ -8,7 +8,6 @@ public class Burger implements Food {
     double burgerPrice;
     String burgerDes;
 
-
     //생
     public Burger(int burgerNumber, String burgerName, double burgerPrice, String burgerDes) {
         this.burgerNumber = burgerNumber;
@@ -41,6 +40,5 @@ public class Burger implements Food {
     public void output() {
         System.out.println(burgerNumber+ ". "+burgerName +"   | W "+ burgerPrice+" | " + burgerDes);
     }
-
 
 }

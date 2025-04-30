@@ -150,6 +150,7 @@ public class KioskLv7 {
     }
 
     // 할인 정보 입력 및 값 반환
+    // Enum을 활용하여 유형에 맞게 할인율 적용
     public void outputDiscountPrice(Scanner sc, double price) {
         System.out.println("할인 정보를 입력해주세요.");
         System.out.println("1. 국가유공자 : 10%");
@@ -175,7 +176,7 @@ public class KioskLv7 {
 
     }
 
-
+    // 쇼핑카트가 비어있지않을때 사용하는 조건문 메서드
     public void shoppingCartIsNotEmpty(Scanner sc) {
         mainMenu.showOrderMenu();
         int inputOredr = sc.nextInt();
@@ -207,6 +208,5 @@ public class KioskLv7 {
             chooseMainMenu();
         }
     }
-
 }
 

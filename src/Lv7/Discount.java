@@ -20,7 +20,7 @@ public enum Discount{
         return num;
     }
 
-    //enum에 있는 람다식 적용
+    //enum에 있는 람다식 적용 메서드
     public double applyDiscount(double price) {
         return function.apply(price);
     }
