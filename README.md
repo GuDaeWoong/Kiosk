@@ -4,6 +4,9 @@
 
 🐥 개발 기간 : 2025.04.24 ~ 2025.05.01
 
+<br>
+<br>
+
 ## ⚙️ 시작 가이드
 
 ### Config
@@ -14,9 +17,9 @@
 $ git clone https://github.com/GuDaeWoong/Kiosk.git
 ```
 
+<br>
+<br>
 
-
-### 
 
 ### 요구사항 숙지
 
@@ -115,7 +118,8 @@ $ git clone https://github.com/GuDaeWoong/Kiosk.git
     -   기존에 생성한 Menu의 MenuItem을 조회 할 때 스트림을 사용하여 출력하도록 수정
     -   기존 장바구니에서 특정 메뉴 빽 기능을 통한 스트림활용
 
-​
+​<br>
+<br>
 
 ## 기능 설명
 
@@ -155,6 +159,9 @@ $ git clone https://github.com/GuDaeWoong/Kiosk.git
 ### 📁 Discount (Enum)
 
 -   할인 유형을 정의
+
+<br>
+<br>
 
 ## ❓ 키오스크를 만들며
 
