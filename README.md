@@ -24,7 +24,8 @@ $ git clone https://github.com/GuDaeWoong/Kiosk.git
 
 <img src="./img/Kiosk.png" alt="Kiosk.png" width="800" />
 
-
+<br>
+<br>
 
 ### 요구사항 숙지
 
