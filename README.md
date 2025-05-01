@@ -15,6 +15,9 @@ $ git clone https://github.com/GuDaeWoong/Kiosk.git
 ```
 
 
+
+###
+
 ### 요구사항 숙지
 
 -   예를 들어, 기본적인 메뉴 선택 “입력”, “출력”, “각 메뉴 관리”, “전체 메뉴 관리” 등
