@@ -20,6 +20,11 @@ $ git clone https://github.com/GuDaeWoong/Kiosk.git
 <br>
 <br>
 
+### 📁 Java Class Structure
+
+<img src="./img/Kiosk.png" alt="Kiosk.png" width="800" />
+
+
 
 ### 요구사항 숙지
 
