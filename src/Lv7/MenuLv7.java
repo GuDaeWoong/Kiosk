@@ -102,7 +102,6 @@ public class MenuLv7 {
     //드링크 메뉴 보여주는 메서드
     public void showDrinkMenu() {
         System.out.println("[ DRINK MENU ]");
-
         foods.stream()
                 .filter(food -> food instanceof Drink)
                 .forEach(food -> food.output());
@@ -112,7 +111,6 @@ public class MenuLv7 {
     //디저트 메뉴 보여주는 메서드
     public void showDessertMenu() {
         System.out.println("[ DESSERT MENU ]");
-
         foods.stream()
                 .filter(food -> food instanceof Dessert)
                 .forEach(food -> food.output());
@@ -131,19 +129,17 @@ public class MenuLv7 {
     public void showTotalMoney() {
         System.out.println("");
         System.out.println("[ Total ]");
-        double totalmoney = 0.0;
-        for (int i = 1; i <= cart.size(); i++) {
-            totalmoney += cart.get(i - 1).getPrice();
-        }
+        double totalmoney = cart.stream()
+                .mapToDouble(item -> item.getPrice())
+                .sum();
         System.out.println("W " + totalmoney);
     }
 
     // 장바구니에 있는 모든 금액계산
     public double cartTotalMoney() {
-        double totalmoney = 0.0;
-        for (int i = 1; i <= cart.size(); i++) {
-            totalmoney += cart.get(i - 1).getPrice();
-        }
+        double totalmoney = cart.stream()
+                .mapToDouble(item -> item.getPrice())
+                .sum();
         return (totalmoney);
     }
 

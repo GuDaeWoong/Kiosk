@@ -130,7 +130,7 @@ public class MenuLv6 {
         }
     }
 
-    // 토탈 금액을 보여줌
+    // 토탈 타이틀과 금액을 보여줌
     public void showTotalMoney() {
         System.out.println("");
         System.out.println("[ Total ]");
