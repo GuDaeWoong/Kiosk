@@ -125,6 +125,10 @@ $ git clone https://github.com/GuDaeWoong/Kiosk.git
     -   기존 장바구니에서 특정 메뉴 빽 기능을 통한 스트림활용
 
 
+<br>
+<br>
+
+
 최종 프로그램 실행시 콘솔
 
 ```
@@ -197,6 +201,7 @@ W 8.9
 ​<br>
 <br>
 
+
 ## 기능 설명
 
 ### 📁 Main
@@ -235,9 +240,6 @@ W 8.9
 ### 📁 Discount (Enum)
 
 -   할인 유형을 정의
-
-<br>
-<br>
 
 
 <br>
